@@ -68,7 +68,6 @@ export default function App() {
 
           <form name="contact" 
             method="POST" 
-            data-netlify="true"
             action="/"
             netlify
           >
