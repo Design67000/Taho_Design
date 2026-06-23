@@ -1,0 +1,114 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+.header {
+  min-height: 50vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: white;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.header p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn,
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #1d4ed8;
+	transform: translateY(-2px);
+  border: 1px black solid;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+article,
+.about,
+.contact {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 130px;
+}
+
+.success {
+	margin: 15px 0;
+	color: green;
+	font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111827;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+}
