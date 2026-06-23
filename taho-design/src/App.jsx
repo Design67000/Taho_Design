@@ -7,10 +7,8 @@ export default function App() {
   const [success, setSuccess] = useState(false)
 
   const handleSubmit = (e) => {
-    e.preventDefault()
   
     const formData = new FormData(e.currentTarget)
-  
     setSuccess(true)
   }
 
@@ -59,7 +57,10 @@ export default function App() {
         <section id="contact" className="contact">
           <h2>Contact</h2>
 
-          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <form name="contact" 
+            method="POST" 
+            data-netlify="true" 
+          >
             <input type="hidden" name="form-name" value="contact" />
 
             <input type="text" name="name" placeholder="Votre nom" required />
