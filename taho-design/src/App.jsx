@@ -4,12 +4,24 @@ import "./App.css";
 
 export default function App() {
 
-  const [success, setSuccess] = useState(false)
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
   
     const formData = new FormData(e.currentTarget)
-    setSuccess(true)
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+      
+      window.location.href = "/merci-form.html";
+    } catch (error) {
+      console.error(error);
+    }
+    
   }
 
 
@@ -62,6 +74,7 @@ export default function App() {
             method="POST" 
             data-netlify="true"
             action="/merci-form.html"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
 
@@ -72,13 +85,6 @@ export default function App() {
 
             <button type="submit">Envoyer</button>
           </form>
-
-          {
-            success &&
-            <p className="success">
-              Votre demande a bien été envoyée.
-            </p>
-          }
 
           <p>Email : taho.design@outlook.fr</p>
           <p>Secteur : Saint-Étienne et alentours</p>
