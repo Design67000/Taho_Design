@@ -57,6 +57,15 @@ export default function App() {
         <section id="contact" className="contact">
           <h2>Contact</h2>
 
+          <div hidden>
+            <form name="contact" data-netlify="true">
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <input type="tel" name="phone" />
+              <textarea name="message"></textarea>
+            </form>
+          </div>
+
           <form name="contact" 
             method="POST" 
             data-netlify="true"
