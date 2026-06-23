@@ -59,7 +59,8 @@ export default function App() {
 
           <form name="contact" 
             method="POST" 
-            data-netlify="true" 
+            data-netlify="true"
+            action="/"
           >
             <input type="hidden" name="form-name" value="contact" />
 
